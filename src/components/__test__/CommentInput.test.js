@@ -1,12 +1,13 @@
 import { mount } from "enzyme";
 import CommentInput from "../../components/CommentInput";
+import Root from "Root";
 
 describe("<CommentInput>", () => {
   let wrapper;
 
   beforeEach(() => {
     // Given
-    wrapper = mount(<CommentInput />);
+    wrapper = mount(<Root><CommentInput /></Root>);
   });
 
   // cleanup
