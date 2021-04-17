@@ -1,5 +1,8 @@
 import React from "react";
 
-export default () => {
-  return <div>I'm comments</div>;
+const Comments = ({ comments }) => {
+return (
+  comments.map((comment, idx) =><div key={idx}>comment</div>)
+)
 };
+export default Comments;

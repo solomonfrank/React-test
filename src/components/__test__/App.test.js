@@ -5,19 +5,23 @@ import CommentInput from "components/CommentInput";
 import Comments from "components/Comments";
 
 describe("<App />", () => {
-  it("shows the comment list", () => {
     // Given
-    const wrapped = shallow(<App />);
+    let wrapped ;
+    beforeEach(() => {
+    wrapped  = shallow(<App />);
+    })
+  it("shows the comment list", () => {
 
     // then
     expect(wrapped.find(Comments).length).toEqual(1);
+ 
   });
 
   it("shows comment input", () => {
-    // Given
-    const wrapped = shallow(<App />);
+    
 
-    // then
+   // then
     expect(wrapped.find(CommentInput).length).toEqual(1);
   });
+  
 });
